@@ -2,7 +2,7 @@
 /*
  * Plugin Name: BCC Everything
  * Plugin URI: https://github.com/felixfischer/wp-bcc-everything
- * Description: Add admins email address to BCC for every outgoing mail
+ * Description: Bcc all outgoing emails to Admin
  * Version: 1.0
  * Author: Felix Fischer
  * Author URI: http://felixfischer.com
