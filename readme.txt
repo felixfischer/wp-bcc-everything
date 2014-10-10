@@ -7,21 +7,24 @@ Stable tag: trunk
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Blind copy (Bcc:) all outgoing emails to Admin. This can be used to verify the
-correct sending of emails, or as a simple monitoring device.
+Blind copy (Bcc) all outgoing email to additional recipients.
 
 == Description ==
 
-This plugin adds the primary blog email address as Bcc: recipient to every email
-sent by WordPress. It uses the address defined in Settings -> General. There is
-nothing to configure in this plugin. Just activate and forget.
+The plugin adds additional BCC recipients to every email that is sent through
+WordPress' `wp_mail()` function. Simply enter multiple comma separated email
+addresses into the *BCC Recipient* field near the bottom of Settings -> General.
 
 == Installation ==
 
-1. Upload `wp-bcc-everything.php` to the `/wp-content/plugins/` directory
+1. Upload `bcc-everything.php` to the `/wp-content/plugins/` directory
 1. Activate the plugin through the 'Plugins' menu in WordPress
+1. Set BCC recipients under Settings -> General (defaults to admin)
 
 == Changelog ==
+
+= 1.1 =
+* customizable recipient
 
 = 1.0.1 =
 * fix improper handling of string type headers
