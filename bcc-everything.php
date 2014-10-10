@@ -2,8 +2,8 @@
 /*
  * Plugin Name: BCC Everything
  * Plugin URI: https://github.com/felixfischer/wp-bcc-everything
- * Description: Blind copy (Bcc:) outgoing emails to Admin
- * Version: 1.1
+ * Description: Blind copy (Bcc) outgoing emails to additional recipients.
+ * Version: 1.1.1
  * Author: Felix Fischer
  * Author URI: http://felixfischer.com
  *
@@ -85,8 +85,8 @@ function bcce_section_options_callback() { // Section Callback
  */
 function bcce_textbox_callback($args) {  // Textbox Callback
   $option = bcce_recipient();
-  $html = '<input type="text" id="%s" name="%s" value="%s" />';
-  echo sprintf($html, $args[0], $args[0], $option);
+  $h = '<input type="text" id="%s" name="%s" class="regular-text" value="%s"/>';
+  echo sprintf($h, $args[0], $args[0], $option);
 }
 
 
