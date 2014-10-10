@@ -1,6 +1,6 @@
 === BCC Everything ===
 Contributors: ffischer
-Tags: email, mail, wp_mail, bcc
+Tags: email, mail, wp_mail, bcc, blind copy, monitoring
 Requires at least: 2.2
 Tested up to: 4.0
 Stable tag: trunk
