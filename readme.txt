@@ -23,6 +23,9 @@ addresses into the *BCC Recipient* field near the bottom of Settings -> General.
 
 == Changelog ==
 
+= 1.1.2 =
+* streamlined configuration
+
 = 1.1.1 =
 * harmonized wording
 

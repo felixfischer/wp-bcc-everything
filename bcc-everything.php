@@ -3,7 +3,7 @@
  * Plugin Name: BCC Everything
  * Plugin URI: https://github.com/felixfischer/wp-bcc-everything
  * Description: Blind copy (Bcc) outgoing emails to additional recipients.
- * Version: 1.1.1
+ * Version: 1.1.2
  * Author: Felix Fischer
  * Author URI: http://felixfischer.com
  *
@@ -60,7 +60,7 @@ function bcce_plugin_options() {
   );
   add_settings_field(
     'bcce_recipient', // Option ID
-    'BCC Recipient Email', // Label
+    'BCC Recipient(s)', // Label
     'bcce_textbox_callback', // !important - This is where the args go!
     'general', // Page it will be displayed (General Settings)
     'bcce', // Name of our section
@@ -76,7 +76,9 @@ function bcce_plugin_options() {
  * callback function to insert additional information into the section
  */
 function bcce_section_options_callback() { // Section Callback
-  echo '<p>Send a blind copy (Bcc:) of all outgoing emails to this address:</p>';
+  $p = '<p>Send blind copies (Bcc) of all outgoing emails ';
+  $p .= 'to additional recipient(s) (specify below)</p>';
+  echo $p;
 }
 
 
@@ -85,8 +87,9 @@ function bcce_section_options_callback() { // Section Callback
  */
 function bcce_textbox_callback($args) {  // Textbox Callback
   $option = bcce_recipient();
-  $h = '<input type="text" id="%s" name="%s" class="regular-text" value="%s"/>';
+  $h = '<input type="email" id="%s" name="%s" class="regular-text" value="%s"/>';
   echo sprintf($h, $args[0], $args[0], $option);
+  echo '<p class="description">multiple email addresses, separated by comma</p>';
 }
 
 
